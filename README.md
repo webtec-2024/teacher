@@ -1,2 +1,3 @@
 # teacher
-The teacher repo
+
+The teacher repo.
