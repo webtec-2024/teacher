@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+    <title>My Sandbox</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        h3 {
+            color: green;
+        }
+
+        .content {
+            border: 1px solid black;
+            background-color: #eee;
+            padding: 2em;
+            margin: 0 auto;
+            height: 500px;
+            width: 800px;
+            border-radius: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>My Sandbox</h1>
+    <div id="content" class="content">
+    </div>
+    <script>
+      const myContent = document.getElementById('content')
+
+      myContent.innerHTML = '<h3>This is a template!</h3>'
+
+      console.log('Sandbox is ready!')
+    </script>
+</body>
+</html>
