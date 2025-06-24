@@ -43,20 +43,26 @@ let gameObj = {
 }
 
 
-
+/**
+ * Resets the game.
+ */
 function resetGame() {
   window.location.reload()
 }
 
 
-
-async function handleClick(event) {
+/**
+ * Updates the score.
+ */
+async function handleClick() {
   gameObj.score++
   console.log(`Point!, Total: ${gameObj.score}`)
 }
 
 
-
+/**
+ * Updates the position each game tick.
+ */
 async function gameTick() {
   let pos = gameObj.getNewPos()
   
@@ -68,7 +74,10 @@ async function gameTick() {
 }
 
 
-
+/**
+ * Fetches the chosen background.
+ * @param {number} bg The chosen background. 
+ */
 async function getBackground(bg) {
   document.body.innerHTML = "<h1>Please wait...</h1>"
   let temp = await fetch(`https://raw.githubusercontent.com/webtec-2024/teacher/refs/heads/main/kmom06/backgrounds/${bg}.jpg`)
@@ -86,7 +95,10 @@ async function getBackground(bg) {
 }
 
 
-
+/**
+ * Fetches the duck image and sets url and size.
+ * Also adds the eventlistener.
+ */
 async function getDuck() {
   let temp = await fetch(`https://raw.githubusercontent.com/webtec-2024/teacher/refs/heads/main/kmom06/duck/duck.png`)
   let blob = await temp.blob()
@@ -99,7 +111,9 @@ async function getDuck() {
 }
 
 
-
+/**
+ * Handles the game setup.
+ */
 async function setupGame() {
   gameObj.area = document.body
   gameObj.speed = parseInt(document.getElementById("speed").value)
