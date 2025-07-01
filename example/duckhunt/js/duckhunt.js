@@ -80,16 +80,13 @@ async function gameTick() {
  */
 async function getBackground(bg) {
   document.body.innerHTML = "<h1>Please wait...</h1>"
+  
   let temp = await fetch(`https://raw.githubusercontent.com/webtec-2024/teacher/refs/heads/main/kmom06/backgrounds/${bg}.jpg`)
   let blob = await temp.blob()
   backgroundImage = URL.createObjectURL(blob)
 
   document.body.style.backgroundImage = `url(${backgroundImage})`
-  document.body.style.backgroundSize = "cover"
-  document.body.style.backgroundRepeat = "no-repeat"
-  document.body.style.backgroundPosition = "center"
-  document.body.style.height = "100vh"
-  document.body.style.width = "100vw"
+  document.body.classList.add("background")
 
   document.body.innerHTML = ""
 }

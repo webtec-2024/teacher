@@ -38,3 +38,11 @@ h3 {
   background-color: white;
   opacity: 0.8;
 }
+
+.background {
+  background-size: cover; /* Bilden ska täcka hela sidan */
+  background-repeat: no-repeat; /* Bilden ska inte repetera sig */
+  background-position: center; /* Bilden ska vara centrerad */
+  height: 100vh; /* Bilden ska täcka 100% av skärmens höjd */
+  width: 100vw; /* Bilden ska täcka 100% av skärmens bredd */
+}
