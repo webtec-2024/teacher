@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.selected {
+  outline: 3px solid black;
+}
+
+.box {
+    height: 200px;
+    width: 200px;
+    background-color: red;
+    position: absolute;
+}
+
+.animateSize {
+  transition: width 1s, height 1s;
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+.red {
+  background-color: red;
+}
+
+.orange {
+  background-color: orange;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.green {
+  background-color: green;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.indigo {
+  background-color: indigo;
+}
+
+.violet {
+  background-color: violet;
+}
